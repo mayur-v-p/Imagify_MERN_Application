@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Result from "./pages/Result";
 import BuyCredict from "./pages/BuyCredict";
 import NavBar from "./components/NavBar";
+import Footer from "./components/Footer";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/result" element={<Result />} />
         <Route path="/buy" element={<BuyCredict />} />
       </Routes>
+      <Footer />
     </div>
   );
 };
