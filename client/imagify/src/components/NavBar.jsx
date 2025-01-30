@@ -4,7 +4,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 
 function NavBar() {
-  const { user } = useContext(AppContext);
+  const { user, setShowLogin } = useContext(AppContext);
 
   const navigete = useNavigate();
   return (
@@ -46,7 +46,10 @@ function NavBar() {
             <p onClick={() => navigete("/buy")} className="cursor-pointer">
               Pricing
             </p>
-            <button className="bg-zinc-800 text-white px-7 py-2 rounded-full">
+            <button
+              onClick={() => setShowLogin(true)}
+              className="bg-zinc-800 text-white px-7 py-2 rounded-full"
+            >
               Login
             </button>
           </div>
